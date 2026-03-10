@@ -630,6 +630,13 @@ function my_template_acf_mataboxes(){
                     'value' => 'template-about.php',
                 ),
             ),
+            array(
+                array(
+                    'param' => 'page_template',
+                    'operator' => '==',
+                    'value' => 'template-homepage.php',
+                ),
+            ),
         ),
         'menu_order' => 10,
     ));
@@ -1737,13 +1744,13 @@ function my_template_acf_mataboxes(){
                     'value' => 'template-about.php',
                 )
             ),
-            // array(
-            //     array(
-            //         'param' => 'page_template',
-            //         'operator' => '==',
-            //         'value' => 'template-servicepage.php',
-            //     ),
-            // ),
+            array(
+                array(
+                    'param' => 'page_template',
+                    'operator' => '==',
+                    'value' => 'template-homepage.php',
+                ),
+            ),
         ),
         'menu_order' => 21,
     ));
@@ -2118,6 +2125,13 @@ function my_template_acf_mataboxes(){
                     'value' => 'template-about.php',
                 )
             ),
+            array(
+                array(
+                    'param' => 'page_template',
+                    'operator' => '==',
+                    'value' => 'template-homepage.php',
+                )
+            ),
         ),
         'menu_order' => 190,
     ));
@@ -2415,13 +2429,13 @@ function my_template_acf_mataboxes(){
                     'value' => 'template-partners.php',
                 )
             ),
-            // array(
-            //     array(
-            //         'param' => 'page_template',
-            //         'operator' => '==',
-            //         'value' => 'template-servicepage.php',
-            //     ),
-            // ),
+            array(
+                array(
+                    'param' => 'page_template',
+                    'operator' => '==',
+                    'value' => 'template-homepage.php',
+                ),
+            ),
         ),
         'menu_order' => 51,
     ));
