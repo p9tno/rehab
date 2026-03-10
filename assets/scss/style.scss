@@ -1,0 +1,57 @@
+@import 'mixins/mixin'; 
+@import 'variables/variables';
+@import 'core/fonts';
+@import "../fonts/icon/style.css";
+@import 'core/reset';
+@import 'core/template';
+@import 'core/preloader';
+@import 'core/toTop';
+@import 'core/contactDetails';
+
+@import 'core/header';
+
+@import 'core/footer';
+
+@import 'core/form';
+
+@import 'core/breadcrumb';
+
+@import 'core/pagination';
+
+@import 'core/buttons';
+
+@import 'core/video';
+@import 'core/tabs';
+@import 'core/aside';
+@import 'core/share';
+
+
+@import 'sections/head';
+@import 'sections/hscroll';
+@import 'sections/advantages';
+@import 'sections/steps';
+@import 'sections/fullvideo';
+@import 'sections/testimonials';
+@import 'sections/logos';
+@import 'sections/blog';
+@import 'sections/pageContent';
+@import 'sections/media';
+@import 'sections/team';
+@import 'sections/compare';
+@import 'sections/details';
+@import 'sections/twins';
+@import 'sections/heading';
+@import 'sections/faq';
+@import 'sections/tabs-section';
+@import 'sections/img-grid';
+@import 'sections/text-grid';
+@import 'sections/accent';
+@import 'sections/offers';
+@import 'sections/feedback';
+@import 'sections/quiz';
+@import 'sections/notfound';
+@import 'sections/thank';
+@import 'sections/mortgageCalculator';
+
+@import 'vendor/modal';
+@import 'vendor/swiper';

@@ -1,0 +1,319 @@
+.blog {
+
+    .swiper {
+        padding: 0.125em 0;
+        overflow: visible;
+        margin-top: 1.5em;
+        margin-right: 2em;
+        @media (min-width: 768px) {
+            margin-top: 2.8125em;
+            margin-right: 0;
+        }
+    }
+
+    .archive & {
+        padding-bottom: 3.75em;
+        @media (min-width: 768px) {
+            padding-bottom: 7.5em;
+        }
+
+        .section__title {
+            @media (min-width: 768px) {
+                text-align: left;
+            }
+        }
+    }
+
+    .single-blog & {
+
+        .section__title {
+            text-align: left;
+            @media (min-width: 768px) {
+              max-width: 17em;
+            }
+        }
+
+        .blog__layout {
+            @media (max-width: 767px) {
+              margin-top: 1.5em;
+            }
+        }
+    }
+
+    &__swiper {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__layout {
+        margin-top: 3.125em;
+        @media (min-width: 768px) {
+            margin-top: 3.75em;
+            display: flex;
+            gap: 2.5em;
+            
+            .post-type-archive-blog & {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1.75em;
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 1.875em;
+            grid-row-gap: 5.1875em;
+        }
+    }
+
+    &__aside {
+        margin-top: 3.125em;
+        @media (min-width: 768px) {
+            margin-top: 0em;
+            flex: none;
+            width: 26.25em;
+            top: 3.125em;
+        }
+    }
+
+    &__item {      
+    }
+
+    &__thumbnail {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%;
+        height: 20.0625em;
+        padding: 1.25em;
+        border-radius: 1.25em;
+        margin-bottom: 0.625em;
+
+    }
+
+    &__categories {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5em;
+
+        li {
+            display: inline-block;
+            padding: 0.5em 0.8em;
+            border-radius: 0.25em;
+            color: #525252;
+            background-color: rgba($color_white, 0.75);
+            backdrop-filter: blur(8px);
+            line-height: 1;
+            
+            span {
+                font-size: 0.875em;
+                line-height: 1;
+                letter-spacing: 0.035em;
+            }
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__excerpt {
+        margin-top: 0.75em;
+           > * {
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+        p {
+			font-size: 1.125em;
+			font-weight: 400;
+			letter-spacing: 0.03334em;
+		
+            line-height: 1.3333334;
+			
+			@media (min-width: 768px) {
+				font-size: 1.125em;
+			}
+		}
+
+		a {
+			position: relative;
+			text-decoration: none;
+			color: $color_info_dark;
+
+			&:after {
+				content: '';
+				position: absolute;
+				display: inline-block;
+				width: 100%;
+				left: 0;
+				bottom: -0.0625em;
+				border-bottom: 1px solid;
+				border-color: inherit;
+
+				@media (min-width: 768px) {
+					transition: width 0.3s;
+				}
+			}
+
+			@media (min-width: 768px) {
+				&:hover {
+					&:after {
+						width: 65%;
+					}
+				}
+			}
+			
+		}
+    }
+
+    &__title {
+        font-size: 1.5em;
+		font-weight: 400;
+		letter-spacing: 0.035em;
+    }
+
+ 
+    &__btn {
+        margin-top: 1.125em;
+        display: flex;
+        align-items: center;
+        gap: 0.75em;
+        text-decoration: none;
+        color: $main_color;
+
+        span {
+            font-size: 1.125em;
+            font-weight: 400;
+            letter-spacing: 0.035em;
+            color: $color_info;
+        }
+
+        i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.75em;
+            height: 2.75em;
+            border-radius: 100%;
+            color: $color_white;
+            background-color: rgba(#8FB5CE, 0.75);
+            @media (min-width: 768px) {
+              transition: 0.8s;
+            }
+            
+        }
+        
+        @media (min-width: 768px) {
+            &:hover {
+                i {
+                    background-color: rgba(#8FB5CE, 1);
+                }
+            }
+          
+        }
+
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+          flex-grow: 1;
+        }
+
+        .section__content {
+            margin-top: 3.125em;
+            @media (min-width: 768px) {
+              margin-top: 2.5em;
+              width: 56.25em;
+            }
+        }
+
+        .blog__thumbnail {
+            height: 21.875em;
+            @media (min-width: 768px) {
+              height: 31.25em;
+            }
+        }
+    }
+
+    &__date {
+        margin-top: 1.5em;
+        @media (min-width: 768px) {
+            margin-top: 0.75em;
+        }
+
+        span {
+            color: #525252;
+            font-size: 1em;
+            font-weight: 400;
+            letter-spacing: 0.035em;
+
+            @media (min-width: 768px) {
+              font-size: 1.125em;
+            }
+        }
+    }
+
+}
+
+
+.category {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.625em;
+    margin-top: 0.625em;
+  
+
+    &__item {
+        input {
+            display: none;
+            &:checked ~ label {
+                color: $color_info;
+            }
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            justify-content: space-between;
+            color: #525252;
+            font-size: 1.125em;
+            font-weight: 500;
+            letter-spacing: 0.03334em;
+            line-height: 1.25;
+
+            @media (min-width: 768px) {
+                font-size: 1.125em;
+                line-height: 1.3333334;
+            }
+
+            cursor: pointer;
+
+            span {
+                line-height: 1;
+            }
+
+        }
+
+    }
+
+}
+

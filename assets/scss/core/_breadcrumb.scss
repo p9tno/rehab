@@ -1,0 +1,54 @@
+.breadcrumbs {
+	position: absolute;
+	top: 4em;
+	left: 1.25em;
+	z-index: 1;
+	padding-bottom: 0;
+	color: #525252;
+	
+	.home &,
+	.page-template-template-about &,
+	.page-template-template-servicepage & {
+		color: $color_white;
+	}
+
+	
+	@media (min-width: 768px) {
+		top: 7.125em;
+		left: 3.75em;
+	}
+
+
+	.kama_breadcrumbs {
+		font-size: 0.8125em;
+		@media (min-width: 768px) {
+			font-size: 0.875em;
+		}
+		
+		a {
+			text-decoration: none;
+		}
+
+		a,
+		span {
+			color: inherit;
+			font-weight: 400;
+			letter-spacing: 0.035em;
+		}
+
+		.kb_sep {
+			&:before {
+			  content: '/';
+			}
+			display: inline-block;
+			margin-left: 0.2em;
+			margin-right: 0.25em;
+		}
+
+		.kb_title {
+			color: inherit;
+		}
+
+	}
+
+}

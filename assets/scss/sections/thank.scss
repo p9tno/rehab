@@ -1,0 +1,70 @@
+.thank {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+
+    &__wrap {
+        text-align: center;
+        @media (min-width: 768px) {
+          width: 37.5em;
+        }
+    }
+
+    &__title {
+        font-size: 1.5em;
+        letter-spacing: 0.015em;
+        line-height: 1.25;
+        margin: 0;
+        font-weight: 400;
+
+        color: $color_info;
+
+        @media (min-width: 768px) {
+            font-size: 2em;
+        }
+    }
+
+    &__desc {
+        margin-top: 1em;
+        span {
+            font-size: 1em;
+			font-weight: 400;
+			letter-spacing: 0.03334em;
+			line-height: 1.25;
+			
+			@media (min-width: 768px) {
+				line-height: 1.3333334;
+				font-size: 1.125em;
+			}
+        }
+    }
+
+    &__img {
+        overflow: hidden;
+        border-radius: 1.6875em;
+        height: 13.9375em;
+        margin-bottom: 1.5em;
+
+        @media (min-width: 768px) {
+            height: 22.0625em;
+            margin-bottom: 2em;
+        }
+    }
+
+    &__btn {
+        margin-top: 1.5em;
+
+        @media (min-width: 768px) {
+            margin-top: 3.125em;
+        }
+
+        .btn {
+            min-width: 15.9375em;
+        }
+    }
+
+}
+

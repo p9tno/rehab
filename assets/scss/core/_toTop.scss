@@ -1,0 +1,35 @@
+.toTop {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    bottom: 2em;
+    right: 1em;
+    @media (min-width: 768px) {
+        bottom: 5em;
+        right: 2em;
+    }
+
+    a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.75em;
+        height: 2.75em;
+        border-radius: 100%;
+        background-color: rgba(#8FB5CE, 0.75);;
+        color: $color_white;
+        font-size: 0.75em;
+
+        @media (min-width: 768px) {
+            font-size: 1em;
+            transition: 0.8s;
+
+            &:hover {
+              background-color: rgba(#8FB5CE, 1);
+            }
+        }
+    }
+}
+
+

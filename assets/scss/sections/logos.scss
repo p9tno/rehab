@@ -1,0 +1,58 @@
+.logos {
+    .swiper {
+        padding: 0.125em 0;
+        overflow: visible;
+        margin-right: 3em;
+        @media (min-width: 768px) {
+          margin-right: 0;
+        }
+    }
+    &__swiper {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .swiper-slide {
+        box-shadow: 0px 0px 2.6px 0px rgba($main_color, 0.25);
+        border-radius: 0.125em;
+        @media (min-width: 768px) {
+            border-radius: 0.25em;
+        }
+
+    }
+
+    &__img {
+        overflow: hidden;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 0.125em;
+        height: 4.5625em;
+        text-decoration: none;
+
+        @media (min-width: 768px) {
+          border-radius: 0.25em;
+          height: 9.375em;
+
+          &:hover {
+            img {
+                transform: scale(1.1);
+            }
+          }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            @media (min-width: 768px) {
+                transform: scale(1);
+                transition: 0.8s;
+            }
+        }
+    }
+
+}

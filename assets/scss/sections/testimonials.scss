@@ -1,0 +1,83 @@
+.testimonials {
+    .swiper {
+        overflow: visible;
+        margin-right: 3em;
+        @media (min-width: 768px) {
+          margin-right: 0;
+        }
+    }
+
+    .swiper-slide {
+        min-height: 26.75em;
+        @media (min-width: 768px) {
+          min-height: 25.25em;
+        }
+    }
+
+    &__swiper {
+        position: relative;
+        overflow: hidden;
+        margin-top: 1.5em;
+        
+        @media (min-width: 768px) {
+            margin-top: 2.8125em;
+        }
+    }
+
+    &__slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1em;
+
+        height: 100%;
+        padding: 1em;
+        border-radius: 1.5em;
+        
+        color: $color_white;
+        background-color: $color_info;
+
+        min-height: 26.75em;
+        @media (min-width: 768px) {
+            padding: 3.125em;
+            min-height: 25.25em;
+        }
+    }
+
+    &__video {
+        height: 100%;
+        border-radius: 1.5em;
+        overflow: hidden;
+        min-height: 26.75em;
+        @media (min-width: 768px) {
+            min-height: 25.25em;
+        }
+
+        &.video {
+            position: absolute;
+        }
+
+        .video__btn {
+            @media (min-width: 768px) {
+                font-size: 0.75em;
+            }
+
+            svg {
+                font-size: 1.3332em;
+            }
+        }
+    }
+
+    &__name {
+        font-size: 1em;
+        font-weight: 600;
+        letter-spacing: 0.03334em;
+        line-height: 1.25;
+			
+        @media (min-width: 768px) {
+            line-height: 1.3333334;
+            font-size: 1.125em;
+        }
+    }
+
+}

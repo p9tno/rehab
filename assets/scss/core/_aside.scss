@@ -1,0 +1,136 @@
+.aside {
+    @media (min-width: 768px) {
+        flex: none;
+        position: sticky;
+        top: 0;
+        height: 100%;
+    }
+
+	&_desktop {
+		.aside__item_global {
+			display: none;
+
+			@media (min-width: 768px) {
+			  display: block;
+			}
+		}
+	}
+
+	&_mobile {
+		@media (min-width: 768px) {
+		  display: none;
+		}
+	}
+
+    &__item {
+        padding: 2.5em 1.25em;
+        margin-top: 1.5em;
+        border-radius: 1.5em;
+
+        &:first-child {
+            margin-top: 0;
+        }
+        
+        &.info,
+        &.info_dark {
+            color: $color_white;
+        }
+
+        &.info {
+            background-color: $color_info;
+        }
+
+        &.info_dark {
+            background-color: $color_info_dark;
+        }
+
+		&.border {
+            padding: 1.25em;
+            border-radius: 1.5em;
+            box-shadow: 0px 0px 2.6px 0px rgba(#000, 0.25);
+
+			@media (max-width: 767px) {
+			  margin-bottom: 1.5em;
+			}
+        }
+    }
+
+    &__title {
+        font-size: 1.5em;
+		font-weight: 400;
+		letter-spacing: 0.03334em;
+		line-height: 1.25;
+
+		@media (min-width: 768px) {
+			font-size: 2em;
+		}
+    }
+
+    &__text  {
+        margin-top: 0.75em;
+
+        > * {
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+        p {
+			font-size: 1em;
+			font-weight: 400;
+			letter-spacing: 0.03334em;
+			line-height: 1.25;
+			
+			@media (min-width: 768px) {
+				line-height: 1.3333334;
+				font-size: 1.125em;
+			}
+		}
+
+		a {
+			position: relative;
+			text-decoration: none;
+			color: $color_info_dark;
+
+			&:after {
+				content: '';
+				position: absolute;
+				display: inline-block;
+				width: 100%;
+				left: 0;
+				bottom: -0.0625em;
+				border-bottom: 1px solid;
+				border-color: inherit;
+
+				@media (min-width: 768px) {
+					transition: width 0.3s;
+				}
+			}
+
+			@media (min-width: 768px) {
+				&:hover {
+					&:after {
+						width: 65%;
+					}
+				}
+			}
+			
+		}
+    }
+
+    &__btns {
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25em;
+        @media (min-width: 768px) {
+            gap: 1.875em;
+        }
+
+    }
+    
+}

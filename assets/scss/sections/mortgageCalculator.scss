@@ -1,0 +1,82 @@
+.mortgageCalculator {
+
+    .section__title {
+        text-align: left;
+    }
+
+    .section__subtitle {
+        text-align: left;
+        margin-bottom: 0.925em;
+        width: 100%;
+    }
+
+    .section__label {
+        text-align: left;
+        color: $color_info;
+    }
+
+    .section__btns {
+        justify-content: flex-start;
+    }
+
+    .btn-primary {
+        width: 100%;
+        margin-top: 1.5em;
+    }
+
+    &__layout {
+        margin-top: 1.5em;
+        @media (min-width: 768px) {
+          margin-top: 3.75em;
+          display: flex;
+          gap: 3.75em;
+        }
+    }
+
+    &__aside {
+        @media (min-width: 768px) {
+          position: sticky;
+          height: 100%;
+          top: 0;
+          flex: none;
+          width: 24.375em;
+        }
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+          flex-grow: 1;
+        }
+    }
+
+    &__row {
+        margin-top: 1.5em;
+
+        @media (min-width: 768px) {
+          margin-top: 3.75em;
+
+          display: flex;
+          gap: 2.5em;
+
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+    }
+
+    &__col {
+        margin-top: 1.5em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+            flex: 1 1 0;
+            min-width: 0; 
+        }
+
+        &.chart {
+            @media (min-width: 768px) {
+                width: 480px;
+                flex: none;
+            }
+        }
+    }
+}

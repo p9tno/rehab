@@ -1,0 +1,83 @@
+<!-- start quiz-question radio -->
+<div class="quiz-question quiz-question__text" data-q="">
+    <div class="quiz-question__title">TITLE</div>
+    <div class="quiz-question__wrap">
+
+        <!-- start quiz-question__text-block -->
+        <div class="quiz-question__text-block">
+            <label class="quiz-question__text-label">
+                <input type="radio" name="q-1" value="INPUT_CONTENT"/>
+                <div class="quiz-question__check"><i class="icon_mark"></i></div>
+                <p>INPUT_CONTENT</p>
+            </label>
+            <div class="quiz-question-hint">
+                <i class="icon_question"></i>
+                <div class="quiz-question-hint__content">
+                    <span>Here is an annotation text,whitch can by any</span>
+                </div>
+            </div>
+        </div>
+        <!-- end quiz-question__text-block -->
+
+    </div>
+</div>
+<!-- end quiz-question radio -->
+
+
+
+<!-- start quiz-question checkbox -->
+<div class="quiz-question quiz-question__text" data-q="">
+    <div class="quiz-question__title"><span>TITLE</span></div>
+    <div class="quiz-question__wrap">
+
+        <!-- start quiz-question__text-block -->
+        <div class="quiz-question__text-block">
+            <label class="quiz-question__text-label">
+                <input type="checkbox" name="q-1" value="INPUT_CONTENT" />
+                <div class="quiz-question__check"><i class="icon_mark"></i></div>
+                <p>INPUT_CONTENT</p>
+            </label>
+        </div>
+        <!-- end quiz-question__text-block -->
+
+        <!-- start quiz-question__text-block -->
+        <div class="quiz-question__text-block">
+            <label class="quiz-question__text-label">
+                <input type="checkbox" name="q-1" value="INPUT_CONTENT_2" />
+                <div class="quiz-question__check"><i class="icon_mark"></i></div>
+                <p>INPUT_CONTENT_2</p>
+            </label>
+        </div>
+        <!-- end quiz-question__text-block -->
+    </div>
+</div>
+<!-- end quiz-question checkbox -->
+
+
+
+<!-- Вопрос -->
+<div data-branch="true" data-branch-id="property_purpose">
+    <div>How will your property be used?</div>
+    <label data-next="branch_primary"><input value="Primary">Primary</label>
+    <label data-next="branch_secondary"><input value="Secondary">Secondary</label>
+    <label data-next="branch_investment"><input value="Investment">Investment</label>
+</div>
+
+<!-- Ветки -->
+<div data-branch-parent="property_purpose"
+     data-branch-value="Primary"
+     data-branch-id="branch_primary">
+    Questions for primary residence...
+</div>
+
+<div data-branch-parent="property_purpose"
+     data-branch-value="Secondary"
+     data-branch-id="branch_secondary">
+    Questions for secondary home...
+</div>
+
+<div data-branch-parent="property_purpose"
+     data-branch-value="Investment"
+     data-branch-id="branch_investment">
+    Questions for investment property...
+</div>

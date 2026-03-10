@@ -1,0 +1,580 @@
+$transition: 0.7s;
+
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 5;
+	padding: 0.875em 0 0.9375em;
+	background: $color_info;
+
+	.page-template-template-quiz &,
+	.error404 &,
+	.page-template-template-thank & {
+		@media (min-width: 768px) {
+		  background: transparent;
+		}
+	}
+
+	.logo_main {
+		display: block;
+
+		@media (min-width: 768px) {
+			.page-template-template-quiz &,
+			.error404 &,
+			.page-template-template-thank & {
+				display: none;
+			}
+		}
+	}
+
+	.logo_quiz {
+		display: none;
+		@media (min-width: 768px) {
+			.page-template-template-quiz &,
+			.error404 &,
+			.page-template-template-thank & {
+				display: block;
+			}
+		}
+
+	}
+	
+	@media (min-width: 768px) {
+		z-index: 1;
+		padding: 2.5em 0 0.9375em;
+	}
+
+	&__content {
+		@extend .container_center;
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		a {
+			display: block;
+			text-decoration: none;
+			width: 7.25em;
+			@media (min-width: 768px) {
+				width: 10.375em;
+			}
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+		
+		svg {
+			display: block;
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+			
+			/* Оптимизация для мобильных */
+			-webkit-transform: translateZ(0);
+			transform: translateZ(0);
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			-webkit-perspective: 1000;
+			perspective: 1000;
+			
+			/* Уменьшаем количество анимируемых элементов для мобильных */
+			@media (max-width: 768px) {
+				/* Упрощаем анимацию на мобильных */
+				path {
+					animation: simpleFadeIn 1.5s ease-in-out forwards;
+					animation-delay: 0.3s;
+					opacity: 0;
+				}
+			}
+			
+			path {
+				@media (min-width: 769px) {
+					stroke-dasharray: 1000;
+					stroke-dashoffset: 1000;
+					animation: drawLogo 2s ease-in-out forwards;
+					fill: transparent;
+					stroke: white;
+					stroke-width: 1;
+					stroke-linecap: round;
+					stroke-linejoin: round;
+				
+					&:nth-child(1) { animation-delay: 0s; }
+					&:nth-child(2) { animation-delay: 0.3s; }
+					&:nth-child(3) { animation-delay: 0.6s; }
+					&:nth-child(4) { animation-delay: 0.9s; }
+					&:nth-child(5) { animation-delay: 1.2s; }
+					&:nth-child(6) { animation-delay: 1.5s; }
+					&:nth-child(7) { animation-delay: 1.8s; }
+					&:nth-child(8) { animation-delay: 2.1s; }
+					&:nth-child(9) { animation-delay: 2.4s; }
+					&:nth-child(10) { animation-delay: 2.7s; }
+					&:nth-child(11) { animation-delay: 3s; }
+					&:nth-child(12) { animation-delay: 3.3s; }
+					&:nth-child(13) { animation-delay: 3.6s; }
+					&:nth-child(14) { animation-delay: 3.9s; }
+					&:nth-child(15) { animation-delay: 4.2s; }
+				
+					animation: drawLogo 2s ease-in-out forwards, fillInLogo 0.5s ease-in-out 2s forwards;
+				}
+			}
+		}
+
+
+		
+	}
+
+	&__nav {
+		@media (min-width: 768px) {
+			margin-left: auto;
+		}
+
+		.page-template-template-quiz &,
+		.error404 &,
+		.page-template-template-thank & {
+			@media (min-width: 768px) {
+			  display: none;
+			}
+		}
+	}
+
+	&__btn {
+		@media (min-width: 768px) {
+			margin-left: 9.375em;
+		}
+
+		.page-template-template-quiz &,
+		.error404 &,
+		.page-template-template-thank & {
+			display: none;
+			// @media (min-width: 768px) {
+			// 	margin-left: auto;
+			// }
+
+			// .btn {
+			// 	color: $color_info_dark;
+			// }
+		}
+	}
+
+	&__toggle {
+		display: none;
+
+		@media (max-width: 767px) {
+			position: relative;
+			z-index: 51;
+			
+			display: flex;
+			align-items: center;
+			gap: 0.5em;
+			margin-left: auto;
+	
+			color: $color_white;
+	
+			i {
+				position: relative;
+				display: block;
+				width: 1.25em;
+				height: 0.75em;
+				border: 0.125em solid;
+				border-left: 0;
+				border-right: 0;
+				cursor: pointer;
+	
+				&:after,
+				&:before {
+					content: '';
+					display: inline-block;
+					border-top: 0.125em solid;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					left: 0;
+					width: 100%;
+					transition: transform $transition;
+				}
+			}
+	
+			span {
+				font-size: 0.875em;
+				font-weight: 400;
+				letter-spacing: 0.05em;
+				opacity: 1;
+				transform: scale(1);
+				transition: $transition ease-out;
+			}
+	
+			&_open {
+				i {
+					border: 0;
+	
+					&:after,
+					&:before {
+						content: '';
+						border-top: 0.125em solid;
+					}
+	
+					&:before {
+						transform: rotate(45deg);
+					}
+	
+					&:after {
+						transform: rotate(-45deg);
+					}
+				}
+	
+				span {
+					transform: scale(0.3);
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+}
+
+
+@media (max-width: 767px) {
+	.navbar {
+		position: fixed;
+		right: -19.8125em;
+		top: 0;
+		bottom: 0;
+		background-color: $color_info;
+		width: 19.8125em;
+		height: 100vh;
+		z-index: 10;
+		overflow: hidden;
+		padding-bottom: 5em;
+		transition: right $transition;
+
+		overflow-y: auto;
+
+		&_open {
+			right: 0;
+		}
+
+		&__item {
+			padding: 1.75em 1.875em 1.5em;
+			border-top: 1px solid rgba($color_white, 0.15);
+
+			&:first-child {
+				border-top: 0;
+			}
+
+			.btn {
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+.nav-open {
+	overflow: hidden;
+}
+
+.header {
+	.menu {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	
+		@media (min-width: 768px) {
+			position: relative;
+			display: flex;
+			gap: 5.1875em;
+			align-items: center;
+		}
+	
+		&-item {
+			margin-top: 0.75em;
+			position: relative;
+	
+			&:first-child {
+				margin-top: 0;
+			}
+			
+			@media (min-width: 768px) {
+				margin-top: 0;
+			}
+	
+			a {
+				position: relative;
+				font-family: $main_font_family;
+				font-weight: 400;
+				font-size: 0.9375em;
+				letter-spacing: 0.035em;
+				color: $color_white;
+				text-decoration: none;
+				line-height: 1.3333334;
+				
+				@media (min-width: 768px) {
+					font-size: 0.875em;
+				}
+			}
+	
+			&:hover {
+			  > a {
+				text-shadow: 0 0 .65px $color_white, 0 0 .65px $color_white;
+			  }
+			}
+	
+			// Пункты с подменю
+			&.menu-item-has-children {
+	
+				> a {
+					position: relative;
+					
+					@media (min-width: 768px) {
+						padding-right: 1.5em;
+						
+						&:after {
+							font-family: 'icon';
+							content: '\e903';
+							position: absolute;
+							right: 0.5em;
+							top: 0.6em;
+							transform: scale(1);
+							font-size: 0.625em;
+							transition: transform 0.3s ease;
+						}
+					}
+				}
+	
+				@media (min-width: 768px) {
+					&:hover > a:after {
+						transform: scale(-1)
+					}
+	
+				}
+			}
+	
+		}
+	
+		// Подменю (второй уровень)
+		.sub-menu {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+	
+			@media (max-width: 767px) {
+				display: none;
+			}
+	
+			@media (min-width: 768px) {
+				position: absolute;
+				z-index: 10;
+				top: calc(100% + 0.5em);
+				left: 0;
+				background: $color_info;
+				border-radius: 0.25em;
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+				padding: 0.5em 0;
+				opacity: 0;
+				visibility: hidden;
+				transform: translateY(0.625em);
+				transition: all 0.3s ease;
+				display: block !important;
+	
+				&:before {
+				  content: '';
+				  display: block;
+				  position: absolute;
+				  bottom: 100%;
+				  left: 0;
+				  width: 100%;
+				  height: 0.5em;
+				}
+			}
+	
+			.menu-item {
+				margin: 0;
+	
+				a {
+					display: inline-block;
+					width: 100%;
+					font-size: 0.875em;
+					padding: 0.125em 0.75em;
+					text-transform: none;
+					transition: all 0.3s ease;
+					white-space: nowrap;
+	
+					@media (max-width: 767px) {
+						color: $color_white;
+						padding: 0.375em 0.5em;
+						text-transform: none;
+					}
+				}
+	
+				// Пункты с подменю во втором уровне
+				&.menu-item-has-children {
+					position: relative;
+	
+					> a {
+						position: relative;
+	
+						@media (max-width: 767px) {
+							margin-right: 2.5em;
+						}
+	
+						@media (min-width: 768px) {
+							padding-right: 1.5em;
+	
+							&:after {
+								transform: rotate(0);
+							}
+							
+						}
+					}
+					
+					@media (min-width: 768px) {
+						&:hover {
+							a {
+								&:after {
+									transform: rotate(-90deg);
+								}
+							}
+						}
+					}
+	
+					// Подменю третьего уровня
+					.sub-menu {
+						@media (min-width: 768px) {
+							top: -0.5em;
+							left: 100%;
+							transform: translateX(0.625em);
+						}
+	
+						@media (max-width: 767px) {
+							.menu-item a {
+								padding-left: 1.5em;
+								font-size: 0.85em;
+							}
+						}
+					}
+	
+					.menu-toggle {
+						@media (max-width: 767px) {
+							top: 0.4em;
+						}
+					}
+				}
+			}
+		}
+	
+		// Показ подменю на десктопе
+		@media (min-width: 768px) {
+			.menu-item-has-children:hover > .sub-menu {
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0);
+			}
+	
+			.sub-menu .menu-item-has-children:hover > .sub-menu {
+				opacity: 1;
+				visibility: visible;
+				transform: translateX(0);
+			}
+		}
+	
+		// Активный пункт меню
+		.current-menu-item {
+			> a {
+				text-shadow: 0 0 .65px $color_white, 0 0 .65px $color_white;
+			}
+		}
+	}
+	
+	// Мобильные стили
+	@media (max-width: 767px) {
+		.menu-item-has-children {
+			position: relative;
+	
+			> a {
+				margin-right: 3em;
+			}
+		}
+	
+		.menu-toggle {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 0.125em;
+			border: 0;
+	
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 5;
+	
+			background: transparent;
+			color: $color_white;
+			font-size: 1.2em;
+			width: 1.125em;
+			height: 1.125em;
+			transition: 0.3s ease;
+			line-height: 1;
+	
+		}
+	
+		// Показываем подменю когда активно
+		.sub-menu.menu-open {
+			display: block !important;
+		}
+	}
+
+}
+
+
+// stiky menu
+.stiky {
+	position: fixed;
+	padding: 0.5em 0;
+	z-index: 5;
+
+	-webkit-animation-name: showMenu;
+	animation-name: showMenu;
+	-webkit-animation-duration: $transition;
+	animation-duration: $transition;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+
+@keyframes showMenu {
+	0% {
+		opacity: 0.5;
+		transform: translateY(-4em);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0em);
+	}
+}
+
+@keyframes drawLogo {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fillInLogo {
+    to {
+        fill: white;
+    }
+}
+
+/* Упрощенная анимация для мобильных */
+@keyframes simpleFadeIn {
+    to {
+        opacity: 1;
+        fill: white;
+    }
+}

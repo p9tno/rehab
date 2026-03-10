@@ -1,0 +1,28 @@
+.notfound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    
+
+    &__img {
+        margin-bottom: 0.625em;
+        @media (min-width: 768px) {
+          width: 35.9375em;
+        }
+    }
+    
+    &__title {
+        margin: 0;
+        font-size: 2em;
+        font-weight: 400;
+        font-family: $fourth_font_family;
+        line-height: 1;
+        @media (min-width: 768px) {
+            font-size: 2.8125em;
+        }
+    }
+}

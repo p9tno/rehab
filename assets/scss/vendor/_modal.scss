@@ -1,0 +1,238 @@
+// Modal / bootstrap ------------------------------------------
+.modal {
+    display: none;
+    overflow: auto;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+
+    &-open {
+        overflow: hidden;
+    }
+
+    &-close {
+        position: absolute;
+        width: 0.75em;
+        height: 0.75em;
+        right: 1.5625em;
+        top: 1.5625em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #697586;
+        @media (min-width: 768px) {
+            width: 0.875em;
+            height: 0.875em;
+          
+        }
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 100%;
+            border-top: 2px solid;
+        }
+
+        &:before {
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    &.fade .modal-dialog {
+        transform: translate(0, -25%);
+        transition: transform 0.3s ease-out;
+    }
+
+    &.in {
+        display: flex!important;
+        align-items: center;
+        justify-content: center;
+
+        .modal-dialog {
+            transform: translate(0, 0);
+            position: relative;
+        }
+    }
+
+    &-dialog {
+        position: relative;
+        width: auto;
+        margin: auto;
+        width: 20.9375em;
+        @media (min-width: 768px) {
+          width: 49.1875em;
+        }
+
+        .sm & {
+            @media (min-width: 768px) {
+              width: 28.25em;
+            }
+        }
+    }
+
+    &-content {
+        position: relative;
+        background-color: $color_white;
+        border: none;
+        border-radius: 1.5em;
+        background-clip: padding-box;
+        outline: 0;
+        padding: 1.5em 1.25em;
+        
+        @media (min-width: 768px) {
+            padding: 3.125em;
+        }
+
+        .sm & {
+            padding: 1.5em;
+            text-align: center;
+        }
+    }
+
+    &-backdrop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1040;
+        background-color: #212325;
+
+        &.fade {
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+
+        &.in {
+            opacity: 0.35;
+            filter: alpha(opacity=35);
+        }
+    }
+
+    &-header {
+     
+
+    }
+
+    &-title {
+        color: $color_info;
+        font-family: $fourth_font_family;
+        line-height: 1;
+        font-size: 2.5em;
+        @media (min-width: 768px) {
+            font-size: 3.4375em;
+        }
+        
+        .error & {
+            color: $color_danger;
+        }
+    }
+
+    &-body {
+        position: relative;
+        margin-top: 1.625em;
+
+        p {
+			font-size: 1em;
+			font-weight: 400;
+			letter-spacing: 0.03334em;
+			line-height: 1.25;
+            margin: 0;
+			
+			@media (min-width: 768px) {
+				line-height: 1.3333334;
+				font-size: 1.125em;
+			}
+		}
+        
+    }
+    
+    &-footer {
+        margin-top: 1.625em;
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            gap: 1em;
+            justify-content: center;
+
+            .sm & {
+                .btn {
+                    min-width: 21.75em;
+                }
+    
+                &:has(> *:nth-child(2)) {
+                    .btn {
+                        min-width: auto;
+                        flex-grow: 1;
+                    }
+                }
+
+            }
+
+        }
+    }
+
+}
+
+.modalVideo {
+
+    .modal-dialog {
+        position: relative;
+        width: auto;
+        margin: auto;
+        width: 22em;
+        @media (min-width: 768px) {
+            width: 73.25em;
+        }
+    }
+
+    .modal-content {
+        padding: 0;
+        overflow: hidden;
+        background-color: #212325;
+    }
+
+    .modal-close {
+        z-index: 10;
+        color: $color_white;
+    }
+
+    .modal-body {
+        margin: 0;
+    }
+
+    &__wraper {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+
+        iframe,
+        video {
+            display: block;
+            width: 100%!important;
+            height: 100%!important;
+            border: 0;
+            object-fit: cover;
+        }
+
+    }
+}
+

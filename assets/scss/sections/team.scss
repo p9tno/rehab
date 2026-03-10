@@ -1,0 +1,136 @@
+.team {
+    overflow: hidden;
+
+    .section__label,
+    .section__title {
+        text-align: left;
+    }
+
+    .swiper {
+        overflow: visible;
+        margin-right: 6.1em;
+        @media (min-width: 768px) {
+          margin-right: 0;
+        }
+    }
+
+	&__swiper {
+        margin-top: 1.5em;
+        @media (min-width: 768px) {
+          margin-top: 4.6875em;
+        }
+	}
+
+	&__item {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+        width: 100%;
+        min-width: 100%;
+        text-align: center;
+
+        @media (min-width: 768px) {
+          gap: 1.5em;
+
+          &:hover {
+            .team__img {
+                img {
+                    transform: scale(1.2);
+                }
+            }
+
+            .team__name {
+                color: $color_info;
+            }
+          }
+        }
+
+	}
+
+	&__top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #F2F2F2;
+        width: 100%;
+        height: 18.5em;
+
+        @media (min-width: 768px) {
+            height: 31.625em;
+        }
+	}
+
+	&__img {
+        width: 10.4375em;
+        height: 10.4375em;
+        border-radius: 100%;
+        overflow: hidden;
+        
+        @media (min-width: 768px) {
+            width: 20.1875em;
+            height: 20.1875em;
+          
+        }
+
+        img {
+            @media (min-width: 768px) {
+              transition: 0.8s;
+              transform: scale(1);
+            }
+        }
+	}
+
+	&__bottom {
+
+        > * {
+            font-size: 1em;
+            font-weight: 400;
+            letter-spacing: 0.03334em;
+            line-height: 1.25;
+            
+            @media (min-width: 768px) {
+                line-height: 1.3333334;
+                font-size: 1.125em;
+            }
+        }
+
+	}
+
+	&__name {
+        font-size: 1.25em;
+		font-weight: 400;
+		letter-spacing: 0.035em;
+	
+		@media (min-width: 768px) {
+			font-size: 1.5em;
+			line-height: 1.3333334;
+            transition: 0.8s;
+		}
+	}
+
+	&__status {
+        margin-top: 0.2222223em;
+	}
+
+    &__action {
+        margin-top: 0.5em;
+        @media (min-width: 768px) {
+            margin-top: 0.75em;
+        }
+    }
+
+	&__direct {
+        display: block;
+        color: $main_color;
+        text-decoration: none;
+	}
+
+	&__email {
+        display: block;
+        color: $color_info;
+	}
+    
+}
+
+

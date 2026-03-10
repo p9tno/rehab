@@ -1,0 +1,89 @@
+.pagination {
+
+    .archive & {
+        position: relative;
+        z-index: 100;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
+        height: fit-content;
+
+        padding: 2.375em 0 0 0;
+        
+        @media (min-width: 768px) {
+            padding: 3.125em 0 0 0;
+            gap: 1em;
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }   
+
+        > * {
+            position: relative;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 3.61em;
+            height: 3.61em;
+            border-radius: 0.2222222em;
+            border: none;
+            outline: none;
+            max-width: 100%;
+        
+            font-family: $main_font_family;
+            font-weight: 400;
+            font-size: 0.75em;
+            text-decoration: none;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.03334em;
+            
+            color: $main_color;
+            background-color: #E9E9E9;
+            
+            cursor: pointer;
+            transition: 0.8s;
+            
+            @media (min-width: 768px) {
+                font-size: 1.125em;
+                
+            }
+            
+            &:hover:not(&.current,  &.dots, &.next, &.prev) {
+                @media (min-width: 768px) {
+                    color: $color_white;
+                    background-color: $color_info;
+                }
+            }
+
+            &.dots,
+            &.next,
+            &.prev {
+                background-color: transparent;
+                color: $color_info;
+            }
+            
+            &.next,
+            &.prev {
+                @media (min-width: 768px) {
+                  &:hover {
+                    color: $color_warning;
+                  }
+                }
+            }
+                
+            &.dots {
+                cursor: default;
+            }
+    
+            &.current {
+                color: $color_info;
+                background-color: transparent;
+                cursor: default;
+            }
+        }
+    }
+
+}

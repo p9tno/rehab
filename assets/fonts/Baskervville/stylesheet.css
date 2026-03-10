@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Baskervville';
+    src: url('Baskervville-Medium.eot');
+    src: url('Baskervville-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Baskervville-Medium.woff2') format('woff2'),
+        url('Baskervville-Medium.woff') format('woff'),
+        url('Baskervville-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Baskervville';
+    src: url('Baskervville-Regular.eot');
+    src: url('Baskervville-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Baskervville-Regular.woff2') format('woff2'),
+        url('Baskervville-Regular.woff') format('woff'),
+        url('Baskervville-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Baskervville';
+    src: url('Baskervville-Bold.eot');
+    src: url('Baskervville-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Baskervville-Bold.woff2') format('woff2'),
+        url('Baskervville-Bold.woff') format('woff'),
+        url('Baskervville-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Baskervville';
+    src: url('Baskervville-SemiBold.eot');
+    src: url('Baskervville-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Baskervville-SemiBold.woff2') format('woff2'),
+        url('Baskervville-SemiBold.woff') format('woff'),
+        url('Baskervville-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

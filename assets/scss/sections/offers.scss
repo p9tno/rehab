@@ -1,0 +1,57 @@
+.offers {
+
+	&__content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25em;
+        margin-top: 1.5em;
+        @media (min-width: 768px) {
+            margin-top: 3.75em;
+            flex-direction: row;
+            gap: 2.5em;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+	}
+
+	&__item {
+        border-radius: 1.5em;
+        background-color: $color_primary_bg;
+        padding: 1.5em;
+        @media (min-width: 768px) {
+            padding: 2em;
+            width: 20.5em;
+        }
+
+        .section__content {
+            margin-top: 0.25em;
+        }
+	}
+
+	&__title {
+        font-family: $second_font_family;
+        font-size: 2.875em;
+        font-weight: 400;
+        color: $color_accent;
+        letter-spacing: -0.03em;
+        line-height: 0.9;
+        font-feature-settings: "lnum"; /* Включить выравнивающие цифры */
+      
+
+	}
+
+	&__subtitle {
+        font-size: 1em;
+        font-weight: 600;
+        letter-spacing: 0.03334em;
+        line-height: 1.25;
+        margin-top: 1em;
+        
+        @media (min-width: 768px) {
+            line-height: 1.3333334;
+            font-size: 1.125em;
+        }
+
+	}
+
+}

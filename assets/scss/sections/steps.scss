@@ -1,0 +1,94 @@
+.steps {
+
+
+    &__grid {
+        margin-top: 1.5em;
+        text-align: center;
+        
+        @media (min-width: 768px) {
+            margin-top: 5.9375em;
+            
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 4.125em;
+
+            // стили от 4 элементов
+            &:has(> *:nth-child(4)) {
+                text-align: left;
+            }
+
+            &:has(> *:nth-child(5)) {
+                gap: 3.75em;
+
+                .steps__item {
+                    width: 19.5em;
+                }
+
+                .steps__title {
+                    font-size: 1.125em;
+                    font-weight: 600;
+                }
+            }
+
+            &:has(> *:nth-child(6)) {
+                gap: 2em;
+
+                .steps__item {
+                    width: 30em;
+                }
+            }
+
+
+        }
+    }
+
+    &__item {
+        .section__content {
+            margin-top: 0.5em;
+        }
+
+        margin-top: 2em;
+        &:first-child {
+            margin-top: 0;
+        }
+
+        @media (min-width: 768px) {
+            margin-top: 0;
+            flex: none;
+            width: 25em;
+        }
+    }
+
+    &__label {
+        flex: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.75em;
+        height: 3.75em;
+        border-radius: 100%;
+        margin: 0  auto 1em;
+        background-color: $color_warning;
+        color: $color_white;
+        
+        @media (min-width: 768px) {
+            margin: 0 0 1.5em;
+        }
+        
+        span {
+            font-family: $third_font_family;
+            font-size: 1.5625em;
+            font-weight: 500;
+            line-height: 1;
+        }
+    }
+
+    &__title {
+        font-size: 1.5em;
+		font-weight: 400;
+		line-height: 1.3333334;
+		letter-spacing: 0.035em;
+    }
+}

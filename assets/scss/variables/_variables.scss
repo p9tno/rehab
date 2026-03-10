@@ -1,0 +1,99 @@
+/* Global variables */
+/* ======================================================================== */
+$main_font_family: "IBM Plex Sans Condensed";
+$second_font_family: "Baskervville";
+$third_font_family: "Poppins";
+$fourth_font_family: "Inter 18pt";
+$main_color: #1E1E1E;
+$main_line_height: 1.2;
+$main_font_size: 1em;
+
+$container_width: 114.5em;
+
+// $footer_height: auto;
+
+// Color collection for elements
+$color_white: #ffffff;
+$color_info: #7BA1BA;
+$color_info_light: #A6CAE2;
+$color_info_dark: #415A77;
+$color_warning: #D8C3A5;
+$color_primary: #D8D5D0;
+$color_primary_bg: #F6F5F2;
+$color_accent: #CFA573;
+$color_success: #5A9B78;
+$color_danger: #C7483C;
+
+$btn_color: #1E1E1E;
+$btn_border: #D8C3A5;
+$btn_bg: #D8C3A5;
+$btn_color_hover: #1E1E1E;
+$btn_bg_hover: #F5DEBD;
+$btn_border_hover: #F5DEBD;
+
+$btn_secondary_color: #415A77;
+$btn_secondary_border: #7BA1BA;
+$btn_secondary_bg: transparent;
+$btn_secondary_color_hover: #1E1E1E;
+$btn_secondary_bg_hover: #D8C3A5;
+$btn_secondary_border_hover: #D8C3A5;
+
+$btn_tertiary_color: #FFFFFF;
+$btn_tertiary_border: #D8C3A5;
+$btn_tertiary_bg: #D8C3A5;
+$btn_tertiary_color_hover: #FFFFFF;
+$btn_tertiary_bg_hover: #F5DEBD;
+$btn_tertiary_border_hover: #F5DEBD; 
+
+$btn_light_color: #FFFFFF;
+$btn_light_border: #A6CAE2;
+$btn_light_bg: transparent;
+$btn_light_color_hover: #FFFFFF;
+$btn_light_bg_hover: #D8C3A5;
+$btn_light_border_hover: #D8C3A5; 
+
+/* Grid */
+/* ======================================================================== */
+$grid_padding: 1.25em;
+/* 20/16 */
+
+/* Form */
+/* ======================================================================== */
+// Input variables
+
+// Input color
+$input_color: $main_color;
+$input_bg_color: #fff;
+$input_border_color: #ddd;
+$input_placeholder_color: #ddd;
+
+// Input hover color
+$input_hover_color: $main_color;
+$input_hover_bg_color: $input_bg_color;
+$input_hover_border_color: $input_border_color;
+$input_hover_placeholder_color: $input_placeholder_color;
+
+// Input focus color
+$input_focus_color: $main_color;
+$input_focus_bg_color: $input_bg_color;
+$input_focus_border_color: $input_border_color;
+$input_focus_placeholder_color: $input_placeholder_color;
+
+// Input disabled color
+$input_disabled_color: #fff;
+$input_disabled_bg_color: #ccc;
+$input_disabled_border_color: #ccc;
+$input_disabled_placeholder_color: #fff;
+
+// Input error color
+$input_error_color: red;
+$input_error_bg_color: $input_bg_color;
+$input_error_border_color: red;
+// $input_error_placeholder_color: red;
+
+// Button variables
+$btn_default_bg_color: #ddd;
+$btn_default_text_color: $main_color;
+$btn_contrast_text_color: $color_white;
+$btn_default_bg_color_hover: darken($btn_default_bg_color, 7%);
+$btn_default_bg_color_active: darken($btn_default_bg_color, 10%);

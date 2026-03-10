@@ -1,0 +1,197 @@
+// Style for button and pseudo button for input and link
+
+.btn {
+	display: inline-block;
+	padding: 1.75em 1.5em;
+	border-radius: 0.715em;
+	border: 1px solid;
+	outline: none;
+	max-width: 100%;
+
+	font-family: $main_font_family;
+	font-size: 0.875em;
+	font-weight: 500;
+	text-decoration: none;
+	text-align: center;
+	letter-spacing: 0.03334em;
+	line-height: 1.2145;
+
+	color: $btn_color;
+	border-color: $btn_border;
+	background-color: $btn_bg;
+	
+	@media (min-width: 768px) {
+		min-width: 17.143em;
+		cursor: pointer;
+		transition: 0.7s;
+	  
+		&:hover:not(&:disabled) {
+			color: $btn_color_hover;
+			border-color: $btn_border_hover;
+			background-color: $btn_bg_hover;
+		}
+	
+		&:active:not(&:disabled) {
+			color: $btn_color_hover;
+			border-color: $btn_border_hover;
+			background-color: $btn_bg_hover;
+		}
+	}
+
+  	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.7;
+	}
+
+	&_sm {
+		padding: 0.75em;
+		border-radius: 0.3575em;
+		
+		@media (min-width: 768px) {
+			min-width: 10.35em;
+		}
+	}
+
+	&_secondary {
+		color: $btn_secondary_color;
+		border-color: $btn_secondary_border;
+		background-color: $btn_secondary_bg;
+		
+		@media (min-width: 768px) {
+			&:hover:not(&:disabled) {
+				color: $btn_secondary_color_hover;
+				border-color: $btn_secondary_border_hover;
+				background-color: $btn_secondary_bg_hover;
+			}
+		
+			&:active:not(&:disabled) {
+				color: $btn_secondary_color_hover;
+				border-color: $btn_secondary_border_hover;
+				background-color: $btn_secondary_bg_hover;
+			}
+		}
+	}
+
+	&_tertiary {
+		color: $btn_tertiary_color;
+		border-color: $btn_tertiary_border;
+		background-color: $btn_tertiary_bg;
+		
+		@media (min-width: 768px) {
+			&:hover:not(&:disabled) {
+				color: $btn_tertiary_color_hover;
+				border-color: $btn_tertiary_border_hover;
+				background-color: $btn_tertiary_bg_hover;
+			}
+		
+			&:active:not(&:disabled) {
+				color: $btn_tertiary_color_hover;
+				border-color: $btn_tertiary_border_hover;
+				background-color: $btn_tertiary_bg_hover;
+			}
+		}
+	}
+	
+	&_light {
+		color: $btn_light_color;
+		border-color: $btn_light_border;
+		background-color: $btn_light_bg;
+		
+		@media (min-width: 768px) {
+			&:hover:not(&:disabled) {
+				color: $btn_light_color_hover;
+				border-color: $btn_light_border_hover;
+				background-color: $btn_light_bg_hover;
+			}
+		
+			&:active:not(&:disabled) {
+				color: $btn_light_color_hover;
+				border-color: $btn_light_border_hover;
+				background-color: $btn_light_bg_hover;
+			}
+		}
+	}
+
+	&_transparent {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5em;
+		padding: 1.75em 2.25em;
+		min-width: auto;
+		color: $color_info_dark;
+		border-color: transparent;
+		background-color: transparent;
+
+		@media (min-width: 768px) {
+			&:hover:not(&:disabled) {
+				color: $color_info_dark;
+				border-color: transparent;
+				background-color: transparent;
+			}
+		
+			&:active:not(&:disabled) {
+				color: $color_info_dark;
+				border-color: transparent;
+				background-color: transparent;
+			}
+		}
+	}
+
+
+
+}
+
+
+// .btn {
+//   position: relative;
+//   overflow: hidden;
+  
+//   @media (min-width: 768px) {
+//     cursor: pointer;
+//     transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    
+//     &::after {
+//       content: '';
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       width: 0;
+//       height: 0;
+//       background: rgba($color_accent, 0.2);
+//       border-radius: 50%;
+//       transition: all 0.6s ease;
+//       transform: translate(-50%, -50%);
+//     }
+    
+//     &:hover:not(&:disabled) {
+//       transform: translateY(-0.25em);
+//       box-shadow: 
+//         0 15px 35px rgba(0, 0, 0, 0.2),
+//         0 5px 15px rgba(0, 0, 0, 0.1);
+      
+//       &::after {
+//         width: 15em;
+//         height: 15em;
+//       }
+//     }
+    
+//     &:active:not(&:disabled) {
+//       transform: translateY(-0.0625em);
+      
+//       &::after {
+//         width: 350px;
+//         height: 350px;
+//         opacity: 0;
+//       }
+//     }
+
+// 	&_secondary {
+// 		&:after {
+// 		  content: '';
+// 		   background: rgba($color_info, 0.2);
+// 		}
+// 	}
+//   }
+// }
+
+

@@ -1,0 +1,13 @@
+@include font-face("Poppins", '../fonts/Poppins/Poppins-Medium', 500, normal);
+@include font-face("Inter 18pt", '../fonts/Inter18pt/Inter18pt-Regular', normal, normal);
+
+@include font-face("Baskervville", '../fonts/Baskervville/Baskervville-Regular', normal, normal);
+@include font-face("Baskervville", '../fonts/Baskervville/Baskervville-Medium', 500, normal);
+@include font-face("Baskervville", '../fonts/Baskervville/Baskervville-Bold', bold, normal);
+@include font-face("Baskervville", '../fonts/Baskervville/Baskervville-SemiBold', 600, normal);
+
+@include font-face("IBM Plex Sans Condensed", '../fonts/IBMPlexSansCondensed/IBMPlexSansCondensed-Light', 300, normal);
+@include font-face("IBM Plex Sans Condensed", '../fonts/IBMPlexSansCondensed/IBMPlexSansCondensed-Regular', normal, normal);
+@include font-face("IBM Plex Sans Condensed", '../fonts/IBMPlexSansCondensed/IBMPlexSansCondensed-Medium', 500, normal);
+@include font-face("IBM Plex Sans Condensed", '../fonts/IBMPlexSansCondensed/IBMPlexSansCondensed-SemiBold', 600, normal);
+@include font-face("IBM Plex Sans Condensed", '../fonts/IBMPlexSansCondensed/IBMPlexSansCondensed-Bold', bold, normal);

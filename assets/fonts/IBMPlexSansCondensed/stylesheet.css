@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'IBM Plex Sans Condensed';
+    src: url('IBMPlexSansCondensed-Bold.eot');
+    src: url('IBMPlexSansCondensed-Bold.eot?#iefix') format('embedded-opentype'),
+        url('IBMPlexSansCondensed-Bold.woff2') format('woff2'),
+        url('IBMPlexSansCondensed-Bold.woff') format('woff'),
+        url('IBMPlexSansCondensed-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans Condensed';
+    src: url('IBMPlexSansCondensed-Regular.eot');
+    src: url('IBMPlexSansCondensed-Regular.eot?#iefix') format('embedded-opentype'),
+        url('IBMPlexSansCondensed-Regular.woff2') format('woff2'),
+        url('IBMPlexSansCondensed-Regular.woff') format('woff'),
+        url('IBMPlexSansCondensed-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans Condensed';
+    src: url('IBMPlexSansCondensed-Medium.eot');
+    src: url('IBMPlexSansCondensed-Medium.eot?#iefix') format('embedded-opentype'),
+        url('IBMPlexSansCondensed-Medium.woff2') format('woff2'),
+        url('IBMPlexSansCondensed-Medium.woff') format('woff'),
+        url('IBMPlexSansCondensed-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans Condensed';
+    src: url('IBMPlexSansCondensed-SemiBold.eot');
+    src: url('IBMPlexSansCondensed-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('IBMPlexSansCondensed-SemiBold.woff2') format('woff2'),
+        url('IBMPlexSansCondensed-SemiBold.woff') format('woff'),
+        url('IBMPlexSansCondensed-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans Condensed';
+    src: url('IBMPlexSansCondensed-Light.eot');
+    src: url('IBMPlexSansCondensed-Light.eot?#iefix') format('embedded-opentype'),
+        url('IBMPlexSansCondensed-Light.woff2') format('woff2'),
+        url('IBMPlexSansCondensed-Light.woff') format('woff'),
+        url('IBMPlexSansCondensed-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
