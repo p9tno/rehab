@@ -24,14 +24,14 @@ function my_template_acf_mataboxes(){
                 'label' => 'Header', 
                 'type' => 'tab',
             ),
-            // array(
-            //     'key' => 'header_logo',
-            //     'label' => 'Heder logo',
-            //     'name' => 'header_logo',
-            //     'type' => 'image',
-            //     'return_format' => 'id',  // 'id' || 'url'
-            //     'preview_size' => 'full',
-            // ),
+            array(
+                'key' => 'header_logo',
+                'label' => 'Heder logo',
+                'name' => 'header_logo',
+                'type' => 'image',
+                'return_format' => 'id',  // 'id' || 'url'
+                'preview_size' => 'full',
+            ),
             // array(
             //     'key' => 'header_logo_quiz',
             //     'label' => 'Heder logo quiz',
@@ -72,14 +72,14 @@ function my_template_acf_mataboxes(){
                 'post_type' => 'wpforms',  // or array of post types e.g. ['post', 'page']
                 'taxonomy' => '',  // or array of terms e.g. ['category:term-slug']
             ),
-            // array(
-            //     'key' => 'footer_logo',
-            //     'label' => 'Footer logo',
-            //     'name' => 'footer_logo',
-            //     'type' => 'image',
-            //     'return_format' => 'id',  // 'id' || 'url'
-            //     'preview_size' => 'full',
-            // ),
+            array(
+                'key' => 'footer_logo',
+                'label' => 'Footer logo',
+                'name' => 'footer_logo',
+                'type' => 'image',
+                'return_format' => 'id',  // 'id' || 'url'
+                'preview_size' => 'full',
+            ),
             array(
                 'key' => 'nmls_logo',
                 'label' => 'NMLS logo',

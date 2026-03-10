@@ -3,11 +3,9 @@
         <?php if (get_field('header_logo', 'option')) { ?>
             <div class="header__logo">
                 <a href="<?php echo esc_url(home_url("/")); ?>">
-                    <?php get_template_part( 'template-parts/parts/part', 'logo-main' ); ?>
-                    <img class="logo_quiz" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/logo_quiz.svg' ?>" alt="logo">
+                    <?php // get_template_part( 'template-parts/parts/part', 'logo-main' ); ?>
 
-                    <?php // echo wp_get_attachment_image(get_field('header_logo', 'option'), 'full', false, ['class' => 'logo_main']); ?>
-                    <?php // echo wp_get_attachment_image(get_field('header_logo_quiz', 'option'), 'full', false, ['class' => 'logo_quiz']); ?>
+                    <?php echo wp_get_attachment_image(get_field('header_logo', 'option'), 'full', false, ['class' => 'logo_main']); ?>
                 </a>
             </div>
         <?php } ?>    

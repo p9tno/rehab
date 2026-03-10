@@ -14,12 +14,11 @@
                     <div class="footer__row">
                         <?php get_template_part( 'template-parts/parts/part', 'footerNav' ); ?>
                         <div class="footer__col">
-                            <div class="footer__logo">
-                                <img class="logo_quiz" loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/img/logo.svg' ?>" alt="logo">
-                            </div>
-                            <?php // if (get_field('footer_logo', 'option')) { ?>
-                                <?php // echo wp_get_attachment_image(get_field('footer_logo', 'option'), 'full'); ?>
-                            <?php // } ?>
+                            <?php if (get_field('footer_logo', 'option')) { ?>
+                                <div class="footer__logo">
+                                    <?php echo wp_get_attachment_image(get_field('footer_logo', 'option'), 'full'); ?>
+                                </div>
+                            <?php } ?>
                             <?php get_template_part( 'template-parts/parts/part', 'nmls' ); ?>
                             <?php get_template_part( 'template-parts/parts/part', 'contactDetails' ); ?>
                         </div>
