@@ -2075,7 +2075,7 @@ function my_template_acf_mataboxes(){
                 'sub_fields' => array(
                     array(
                         'key' => 'table_criteria',
-                        'label' => 'Criteria',
+                        'label' => 'Part of Day',
                         'name' => 'table_criteria',
                         'type' => 'text',
                         'wrapper' => array (
@@ -2084,29 +2084,29 @@ function my_template_acf_mataboxes(){
                     ),
                     array(
                         'key' => 'table_img_id_d',
-                        'label' => 'Image criteria desktop',
+                        'label' => 'Image Part of Day desktop',
                         'name' => 'table_img_id_d',
                         'type' => 'image',
                         'return_format' => 'id',  // 'id' || 'url' || 'array'
                         'preview_size' => 'thumbnail', // (thumbnail, medium, large, full or custom size)
                         'wrapper' => array (
-                            'width' => '25',
+                            'width' => '50',
                         ),
                     ),
-                    array(
-                        'key' => 'table_img_id_m',
-                        'label' => 'Image criteria mobile',
-                        'name' => 'table_img_id_m',
-                        'type' => 'image',
-                        'return_format' => 'id',  // 'id' || 'url' || 'array'
-                        'preview_size' => 'thumbnail', // (thumbnail, medium, large, full or custom size)
-                        'wrapper' => array (
-                            'width' => '25',
-                        ),
-                    ),
+                    // array(
+                    //     'key' => 'table_img_id_m',
+                    //     'label' => 'Image criteria mobile',
+                    //     'name' => 'table_img_id_m',
+                    //     'type' => 'image',
+                    //     'return_format' => 'id',  // 'id' || 'url' || 'array'
+                    //     'preview_size' => 'thumbnail', // (thumbnail, medium, large, full or custom size)
+                    //     'wrapper' => array (
+                    //         'width' => '25',
+                    //     ),
+                    // ),
                     array(
                         'key' => 'table_lendevity',
-                        'label' => 'Lendevity',
+                        'label' => 'Time',
                         'name' => 'table_lendevity',
                         'type' => 'wysiwyg',
                         'tabs' => 'all',  // 'visual' || 'text' || 'all'
@@ -2119,7 +2119,7 @@ function my_template_acf_mataboxes(){
                     ),
                     array(
                         'key' => 'table_direct_lender',
-                        'label' => 'Direct Lender',
+                        'label' => 'Daily Activity',
                         'name' => 'table_direct_lender',
                         'type' => 'wysiwyg',
                         'tabs' => 'all',  // 'visual' || 'text' || 'all'

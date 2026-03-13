@@ -18,15 +18,15 @@
                         <div class="table">
                             <div class="table__head">
                                 <div class="table__row">
-                                    <div class="table__col"><span>Criteria</span></div>
-                                    <div class="table__col"><span>LENDEVITY</span></div>
-                                    <div class="table__col"><span>Direct Lender</span></div>
+                                    <div class="table__col"><span>Part of Day</span></div>
+                                    <div class="table__col"><span>Time</span></div>
+                                    <div class="table__col"><span>Daily Activity</span></div>
                                 </div>
                             </div>
                             <div class="table__body">
                                 <?php foreach( $rows as $col ) { ?>
                                     <div class="table__row">
-                                        <div class="table__col">
+                                        <div class="table__col desktop">
                                             <div class="table__img">
                                                 <?php echo wp_get_attachment_image($col['table_img_id_d'], 'full', false, ['class' => 'desktop']); ?>
                                                 <?php echo wp_get_attachment_image($col['table_img_id_m'], 'full', false, ['class' => 'mobile']); ?>
@@ -35,12 +35,12 @@
                                         </div>
             
                                         <div class="table__col">
-                                            <span class="mobile">LENDEVITY</span>
+                                            <span class="mobile">Time</span>
                                             <?php echo $col['table_lendevity']; ?>
                                         </div>
             
                                         <div class="table__col">
-                                            <span class="mobile">Direct Lender</span>
+                                            <span class="mobile">Daily Activity</span>
                                             <?php echo $col['table_direct_lender']; ?>
                                         </div>
                                     </div>
