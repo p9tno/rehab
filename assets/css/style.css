@@ -2072,16 +2072,6 @@ div.wpforms-container .wpforms-field-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.lg div.wpforms-container .wpforms-field-container {
-  font-size: 0.625em;
-  grid-gap: 1em;
-}
-@media (min-width: 768px) {
-  .lg div.wpforms-container .wpforms-field-container {
-    font-size: 0.875em;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 div.wpforms-container .wpforms-field-container .wpforms-field {
   padding: 0;
   overflow: visible !important;
@@ -2233,12 +2223,6 @@ div.wpforms-container .wpforms-confirmation-container-full {
   .form__row_full {
     grid-column-start: 1;
     grid-column-end: 3;
-  }
-}
-@media (min-width: 768px) {
-  .lg .form__row_full {
-    grid-column-start: 1;
-    grid-column-end: 4;
   }
 }
 .form__row_btn {
@@ -6225,11 +6209,6 @@ textarea:-ms-input-placeholder {
     width: 28.25em;
   }
 }
-@media (min-width: 768px) {
-  .lg .modal-dialog {
-    width: 90em;
-  }
-}
 .modal-content {
   position: relative;
   background-color: #ffffff;
@@ -6274,11 +6253,6 @@ textarea:-ms-input-placeholder {
 @media (min-width: 768px) {
   .modal-title {
     font-size: 3.4375em;
-  }
-}
-@media (max-width: 767px) {
-  .admission .modal-title {
-    font-size: 2em;
   }
 }
 .error .modal-title {

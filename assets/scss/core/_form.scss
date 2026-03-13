@@ -11,15 +11,6 @@ div.wpforms-container {
 			grid-template-columns: repeat(2, 1fr);
 		}
 
-		.lg & {
-			font-size: 0.625em;
-			grid-gap: 1em;
-			@media (min-width: 768px) {
-				font-size: 0.875em;
-			  	grid-template-columns: repeat(3, 1fr);
-			}
-		}
-
 		.wpforms-field {
 			padding: 0;
 			overflow: visible!important;
@@ -199,13 +190,6 @@ div.wpforms-container {
 			@media (min-width: 768px) {
 			  grid-column-start: 1;
 			  grid-column-end: 3;
-			}
-
-			.lg & {
-				@media (min-width: 768px) {
-				    grid-column-start: 1;
-			  		grid-column-end: 4;
-				}
 			}
 		}
 
