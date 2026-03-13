@@ -159,28 +159,23 @@ $(document).ready(function() {
                 return null;
             }
             
-            // Получаем branch-id этого вопроса
-            const branchId = $question.data('branch-id');
-            if (!branchId) return null;
-            
-            // Ищем ответ с data-next
+            // Получаем выбранный label
             const $label = $question.find(`input[value="${answerValue}"]`).closest('label');
             
+            // Проверяем, есть ли у выбранного варианта data-next
             if ($label.length && $label.data('next')) {
                 const nextBranchId = $label.data('next');
-                
-                // Преобразуем ID ветки в номер вопроса
                 const nextQuestionId = branchManager.branchIdToQuestionId.get(nextBranchId);
                 
                 if (nextQuestionId) {
-                    // console.log(`Answer "${answerValue}" → branch ${nextBranchId} → question ${nextQuestionId}`);
+                    console.log(`Переход к ветке ${nextBranchId} (вопрос ${nextQuestionId})`);
                     return nextQuestionId;
-                } else {
-                    // console.warn(`Branch ID ${nextBranchId} not found for answer "${answerValue}"`);
                 }
             }
             
-            return null;
+            // Если нет data-next - возвращаем "continue" для перехода к следующему вопросу
+            // console.log(`Вариант "${answerValue}" не имеет ветки, переходим к следующему вопросу`);
+            return 'continue';
         },
         
         getDefaultNextQuestion: (questionId) => {
@@ -204,6 +199,17 @@ $(document).ready(function() {
             const requiredValue = branchManager.questionConditions.get(questionId);
             const parentAnswer = userAnswers[parentQuestionId];
             
+            // Проверяем, есть ли у родительского ответа data-next
+            if (parentAnswer) {
+                const $parentQuestion = domUtils.getQuestionElement(parentQuestionId);
+                const $selectedLabel = $parentQuestion.find(`input[value="${parentAnswer.answer}"]`).closest('label');
+                
+                // Если у выбранного варианта нет data-next - не показываем НИКАКИЕ ветки
+                if ($selectedLabel.length && !$selectedLabel.data('next')) {
+                    return false;
+                }
+            }
+            
             // Показываем если родительский вопрос имеет нужный ответ
             return parentAnswer && parentAnswer.answer === requiredValue;
         },
@@ -222,6 +228,7 @@ $(document).ready(function() {
                 
                 processedQuestions.add(questionId);
                 
+                // Проверяем, должен ли вопрос показываться
                 if (branchManager.shouldShowQuestion(questionId, state.userAnswers)) {
                     path.push(questionId);
                     
@@ -229,25 +236,36 @@ $(document).ready(function() {
                         const answer = answerManager.getAnswerFromQuestion(questionId);
                         
                         if (answer) {
-                            const nextBranch = branchManager.getNextQuestionForAnswer(questionId, answer);
-                            if (nextBranch) {
-                                addQuestionToPath(nextBranch);
+                            const nextAction = branchManager.getNextQuestionForAnswer(questionId, answer);
+                            
+                            if (nextAction === 'continue') {
+                                // Переходим к следующему вопросу после родительского
+                                const nextQuestionId = branchManager.getNextNonBranchQuestion(questionId);
+                                if (nextQuestionId) {
+                                    addQuestionToPath(nextQuestionId);
+                                }
+                            } else if (nextAction) {
+                                // Переходим в ветку
+                                addQuestionToPath(nextAction);
                             }
                         } else {
-                            const nextDefault = branchManager.getDefaultNextQuestion(questionId);
-                            if (nextDefault) {
-                                addQuestionToPath(nextDefault);
+                            // Нет ответа - ищем следующий вопрос
+                            const nextQuestionId = branchManager.getNextNonBranchQuestion(questionId);
+                            if (nextQuestionId) {
+                                addQuestionToPath(nextQuestionId);
                             }
                         }
                     } else {
+                        // Обычный вопрос - следующий по порядку
                         const nextQuestionId = questionId + 1;
                         if (nextQuestionId <= state.totalQuestions) {
                             addQuestionToPath(nextQuestionId);
                         }
                     }
                 } else {
-                    const nextQuestionId = questionId + 1;
-                    if (nextQuestionId <= state.totalQuestions) {
+                    // Вопрос не показывается - ищем следующий
+                    const nextQuestionId = branchManager.getNextNonBranchQuestion(questionId);
+                    if (nextQuestionId) {
                         addQuestionToPath(nextQuestionId);
                     }
                 }
@@ -255,6 +273,18 @@ $(document).ready(function() {
             
             addQuestionToPath(1);
             return path;
+        },
+
+        // Новый метод для поиска следующего вопроса после ветки
+        getNextNonBranchQuestion: (currentQuestionId) => {
+            for (let i = currentQuestionId + 1; i <= state.totalQuestions; i++) {
+                const $question = domUtils.getQuestionElement(i);
+                // Пропускаем вопросы-ветки (у которых есть data-branch-parent)
+                if (!$question.data('branch-parent')) {
+                    return i;
+                }
+            }
+            return null;
         },
         
         updateQuestionPath: () => {
