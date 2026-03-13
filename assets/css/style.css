@@ -5546,6 +5546,25 @@ textarea:-ms-input-placeholder {
     height: 100vh;
   }
 }
+.quiz-close {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+  z-index: 5;
+  width: 3em;
+  height: 3em;
+  border-radius: 0.625em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7BA1BA;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.quiz-close i {
+  font-size: 1.25em;
+}
 .quiz-container {
   width: 20.9375em;
 }

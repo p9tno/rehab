@@ -1,5 +1,9 @@
 <!-- begin quiz -->
 <section class="quiz section user_select_none" id="quiz">
+    <a class="quiz-close" href="<?php echo esc_url(home_url("/")) ?>">
+        <i class="icon_close"></i>
+    </a>
+
     <div class="container_center">
         <form class="quiz-form form form_secondary" id="quiz" action="<?php echo get_template_directory_uri() . '/sendQuiz.php'; ?>">
             <input type="hidden" name="page" value="<?php echo home_url( $wp->request ) ?>" />
