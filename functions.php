@@ -130,3 +130,16 @@ require get_template_directory() . '/inc/acf-options.php';
 require get_template_directory() . '/inc/breadcrumb.php';
 require get_template_directory() . '/inc/post-type.php';
 require get_template_directory() . '/inc/filter.php';
+
+
+/**
+ * Отключает эффект прокрутки к ошибке валидации для всех форм WPForms
+ */
+function wpf_dev_disable_scroll_to_error() {
+    ?>
+    <script type="text/javascript">
+        wpforms.scrollToError = function(){};
+    </script>
+    <?php
+}
+add_action( 'wpforms_wp_footer_end', 'wpf_dev_disable_scroll_to_error', 10 );

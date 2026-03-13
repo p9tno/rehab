@@ -42,10 +42,26 @@ function my_template_acf_mataboxes(){
             // ),
             array(
                 'key' => 'header_btn',
-                'label' => 'Button',
+                'label' => 'Button text',
                 'name' => 'header_btn',
-                'type' => 'link',
-                'return_format' => 'array',
+                'type' => 'text',
+                'wrapper' => array (
+                    'width' => '50',
+                ),
+            ),
+            array(
+                'key' => 'header_wp_form_relations',
+                'label' => 'Choose a form',
+                'name' => 'header_wp_form_relations',
+                'type' => 'post_object',
+                'allow_null' => 1,
+                'multiple' => 0,
+                'return_format' => 'id',  // 'id' || 'object'
+                'post_type' => 'wpforms',  // or array of post types e.g. ['post', 'page']
+                'taxonomy' => '',  // or array of terms e.g. ['category:term-slug']
+                'wrapper' => array (
+                    'width' => '50',
+                ),
             ),
             // ------------------------------- tab_footer
             array (
@@ -246,27 +262,27 @@ function my_template_acf_mataboxes(){
                 ),
             ),
             // ------------------------------- mail_quiz
-            array (
-                'key' => 'tab_mail_quiz',
-                'label' => 'Email quiz', 
-                'type' => 'tab',
-            ),
-            array(
-                'key' => 'mail_quiz_list',
-                'label' => 'Email',
-                'name' => 'mail_quiz_list',
-                'type' => 'repeater',
-                'layout' => 'block',  // 'block' || 'row' || 'table'
-                'button_label' => 'Add',
-                'sub_fields' => array(
-                    array(
-                        'key' => 'mail_quiz_to',
-                        'label' => 'Email quiz',
-                        'name' => 'mail_quiz_to',
-                        'type' => 'email',
-                    ),
-                ),
-            ),
+            // array (
+            //     'key' => 'tab_mail_quiz',
+            //     'label' => 'Email quiz', 
+            //     'type' => 'tab',
+            // ),
+            // array(
+            //     'key' => 'mail_quiz_list',
+            //     'label' => 'Email',
+            //     'name' => 'mail_quiz_list',
+            //     'type' => 'repeater',
+            //     'layout' => 'block',  // 'block' || 'row' || 'table'
+            //     'button_label' => 'Add',
+            //     'sub_fields' => array(
+            //         array(
+            //             'key' => 'mail_quiz_to',
+            //             'label' => 'Email quiz',
+            //             'name' => 'mail_quiz_to',
+            //             'type' => 'email',
+            //         ),
+            //     ),
+            // ),
         ),
         'location' => array(
             array(

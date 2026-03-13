@@ -3,8 +3,6 @@
         <?php if (get_field('header_logo', 'option')) { ?>
             <div class="header__logo">
                 <a href="<?php echo esc_url(home_url("/")); ?>">
-                    <?php // get_template_part( 'template-parts/parts/part', 'logo-main' ); ?>
-
                     <?php echo wp_get_attachment_image(get_field('header_logo', 'option'), 'full', false, ['class' => 'logo_main']); ?>
                 </a>
             </div>
@@ -44,30 +42,18 @@
                     <?php get_template_part( 'template-parts/parts/part', 'contactDetails' ); ?>
                 </div>
 
-                <?php if (get_field('header_btn', 'option')) { ?>
-                    <?php 
-                        $link = get_field('header_btn', 'option');
-                        $title = $link['title'];
-                        $url = $link['url'];
-                        $target = $link['target'];
-                    ?>
+                <?php if (get_field('header_btn', 'option') && get_field('header_wp_form_relations', 'option')) { ?>
                     <div class="navbar__item mobile">
-                        <a class="btn btn_sm btn_light" href="<?php echo $url; ?>" <?php if ($target) { echo 'target="_blank"'; } ?>><?php echo $title; ?></a>
+                        <a class="btn btn_sm btn_light show_modal_js" href="#message"><?php the_field('header_btn', 'option'); ?></a>
                     </div>
                 <?php } ?>
             </nav>
 
         </div>
 
-        <?php if (get_field('header_btn', 'option')) { ?>
-            <?php 
-                $link = get_field('header_btn', 'option');
-                $title = $link['title'];
-                $url = $link['url'];
-                $target = $link['target'];
-            ?>
+        <?php if (get_field('header_btn', 'option') && get_field('header_wp_form_relations', 'option')) { ?>
             <div class="header__btn desktop">
-                <a class="btn btn_sm btn_light" href="<?php echo $url; ?>" <?php if ($target) { echo 'target="_blank"'; } ?>><?php echo $title; ?></a>
+                <a class="btn btn_sm btn_light show_modal_js" href="#message"><?php the_field('header_btn', 'option'); ?></a>
             </div>
         <?php } ?>
 
