@@ -28,40 +28,6 @@
         font-size: 1em;
     }
 
-    &__logo {
-        width: 20em;
-        z-index: 2;
-        position: relative;
-        animation: float 3s ease-in-out infinite;
-        
-        svg {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            filter: drop-shadow(0 0.125em 0.25em rgba(0, 0, 0, 0.3));
-            
-            path {
-                stroke-dasharray: 1000;
-                stroke-dashoffset: 1000;
-                animation: draw 3s ease-in-out forwards;
-                fill: transparent;
-                stroke: white;
-                stroke-width: 1;
-                
-                @for $i from 1 through 15 {
-                    &:nth-child(#{$i}) {
-                        animation-delay: 0.2s * $i;
-                    }
-                }
-                
-                // После анимации рисования показываем заполнение
-                animation: draw 2s ease-in-out forwards, fillIn 0.5s ease-in-out forwards;
-                animation-delay: 0s, 2s;
-            }
-        }
-    }
-    
-
     &__water-effect {
         position: absolute;
         top: 50%;
@@ -118,26 +84,7 @@
     }
 }
 
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-0.625em);
-    }
-}
 
-@keyframes draw {
-    to {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes fillIn {
-    to {
-        fill: white;
-    }
-}
 
 .preloaderFilter {
 

@@ -1099,73 +1099,6 @@ body {
     font-size: 1em;
   }
 }
-.preloader__logo {
-  width: 20em;
-  z-index: 2;
-  position: relative;
-  animation: float 3s ease-in-out infinite;
-}
-.preloader__logo svg {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  filter: drop-shadow(0 0.125em 0.25em rgba(0, 0, 0, 0.3));
-}
-.preloader__logo svg path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: draw 3s ease-in-out forwards;
-  fill: transparent;
-  stroke: white;
-  stroke-width: 1;
-  animation: draw 2s ease-in-out forwards, fillIn 0.5s ease-in-out forwards;
-  animation-delay: 0s, 2s;
-}
-.preloader__logo svg path:nth-child(1) {
-  animation-delay: 0.2s;
-}
-.preloader__logo svg path:nth-child(2) {
-  animation-delay: 0.4s;
-}
-.preloader__logo svg path:nth-child(3) {
-  animation-delay: 0.6s;
-}
-.preloader__logo svg path:nth-child(4) {
-  animation-delay: 0.8s;
-}
-.preloader__logo svg path:nth-child(5) {
-  animation-delay: 1s;
-}
-.preloader__logo svg path:nth-child(6) {
-  animation-delay: 1.2s;
-}
-.preloader__logo svg path:nth-child(7) {
-  animation-delay: 1.4s;
-}
-.preloader__logo svg path:nth-child(8) {
-  animation-delay: 1.6s;
-}
-.preloader__logo svg path:nth-child(9) {
-  animation-delay: 1.8s;
-}
-.preloader__logo svg path:nth-child(10) {
-  animation-delay: 2s;
-}
-.preloader__logo svg path:nth-child(11) {
-  animation-delay: 2.2s;
-}
-.preloader__logo svg path:nth-child(12) {
-  animation-delay: 2.4s;
-}
-.preloader__logo svg path:nth-child(13) {
-  animation-delay: 2.6s;
-}
-.preloader__logo svg path:nth-child(14) {
-  animation-delay: 2.8s;
-}
-.preloader__logo svg path:nth-child(15) {
-  animation-delay: 3s;
-}
 .preloader__water-effect {
   position: absolute;
   top: 50%;
@@ -1211,24 +1144,6 @@ body {
   100% {
     transform: scale(2);
     opacity: 0;
-  }
-}
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-0.625em);
-  }
-}
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes fillIn {
-  to {
-    fill: white;
   }
 }
 .preloaderFilter {
