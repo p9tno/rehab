@@ -78,6 +78,14 @@ function my_template_acf_mataboxes(){
                 'preview_size' => 'medium',
             ),
             array(
+                'key' => 'footer_img_bottom',
+                'label' => 'Footer bottom image',
+                'name' => 'footer_img_bottom',
+                'type' => 'image',
+                'return_format' => 'id',  // 'id' || 'url'
+                'preview_size' => 'medium',
+            ),
+            array(
                 'key' => 'footer_wp_form_relations',
                 'label' => 'Choose a form',
                 'name' => 'footer_wp_form_relations',
