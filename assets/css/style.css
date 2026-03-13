@@ -1414,7 +1414,7 @@ body {
 .header__logo a {
   display: block;
   text-decoration: none;
-  width: 7.25em;
+  width: 9.25em;
 }
 @media (min-width: 768px) {
   .header__logo a {
@@ -1424,7 +1424,7 @@ body {
 .header__logo img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 2.5em;
   object-fit: cover;
 }
 .header__logo svg {
@@ -5541,6 +5541,11 @@ textarea:-ms-input-placeholder {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 767px) {
+  .quiz {
+    padding-top: 9em !important;
+  }
+}
 @media (min-width: 768px) {
   .quiz {
     height: 100vh;
@@ -5548,8 +5553,8 @@ textarea:-ms-input-placeholder {
 }
 .quiz-close {
   position: absolute;
-  top: 2em;
-  right: 2em;
+  top: 5em;
+  right: 1em;
   z-index: 5;
   width: 3em;
   height: 3em;
@@ -5561,6 +5566,12 @@ textarea:-ms-input-placeholder {
   color: #ffffff;
   text-decoration: none;
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  .quiz-close {
+    top: 2em;
+    right: 2em;
+  }
 }
 .quiz-close i {
   font-size: 1.25em;
