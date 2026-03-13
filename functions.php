@@ -120,7 +120,7 @@ function remove_menus() {
     // remove_menu_page('users.php');                # Пользователи 
     // remove_menu_page('tools.php');                # Инструменты 
     //remove_menu_page('options-general.php');      # Параметры 
-    remove_menu_page('edit.php?post_type=acf-field-group'); # ACF smart-custom-fields
+    // remove_menu_page('edit.php?post_type=acf-field-group'); # ACF smart-custom-fields
 }
 
 // Отключаем принудительную проверку новых версий WP, плагинов и темы в админке,
