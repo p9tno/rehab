@@ -35,10 +35,6 @@ function lendevity_scripts() {
 		wp_enqueue_script( 'lendevity-quiz', get_template_directory_uri() . '/assets/js/quiz.js', array(), _S_VERSION, true );
 	}
 
-	if ( is_page_template(['template-mortgage-calculator.php']) ) {
-		wp_enqueue_script( 'mortgage-calculator', get_template_directory_uri() . '/assets/js/mortgage-calculator.js', array(), _S_VERSION, true );
-	}
-
 	wp_enqueue_script( 'lendevity-function', get_template_directory_uri() . '/assets/js/function.js', array(), _S_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'lendevity_scripts' );
